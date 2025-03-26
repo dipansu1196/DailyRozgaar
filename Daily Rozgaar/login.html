@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="image/dailyrozgaar1.png">
+        <title>Daily Rozgaar</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Registration.css">
+        <script src="login.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <!---TOP BAR-->
+    <div class="container-fluid topbar d-flex justify-content-end align-items-center">
+        <img src="image/india.png" class="img-fluid" alt="...">
+        <div class="col-sm-1 chooselanguage">
+          <select class="form-select" id="languageSelect">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+    </div>
+
+    <!---NAV BAR-->
+    <nav class="navbar navbar-expand-lg" id="home" style="border-radius: 50px !important; margin: 15px 10px 0px 10px;">
+      <div class="container-fluid " >
+        <a class='navbar-brand' href='/'>
+            <img src="image/dailyrozgaar.png" alt="Logo" class="d-inline-block">
+        </a>
+        <div class="row">
+            <p class="h1  maintitle">DAILY ROZGAAR<br>
+            <span class="h1 tagline" data-en="Where Local Skills Meet Home" data-hi="जहां स्थानीय कौशल घर से मिलते हैं">Where  Local Skills Meet Home</span>
+            </p>
+        </div>
+        
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link otherlink" href="/" data-en="Home" data-hi="होम पेज">Home</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link login-button" href="" data-en="Register" data-hi="पंजीकरण" data-bs-toggle="modal" data-bs-target="#LoginModal"></a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Slider-->
+    <div class="container-fluid backgroundimg" style="background-color: black;padding:5vw 0vw;">
+        <div class="container-fluid col-md-4 formbox" style="background-color: #27374D;padding:30px 0px;border-radius: 30px;margin-bottom: 20px;border: 2px solid white;">
+            <div class="col-sm-12" style="text-align: center;margin-bottom: 20px;color:white;">
+                <p class="h1" data-en="LOGIN" data-hi="लॉगिन">LOGIN</p>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="toggle-group col-md-10">
+                    <div class="slider"></div>
+                  <!-- Worker Button -->
+                  <input type="radio" class="btn-check" name="toggle" id="worker" autocomplete="off" checked>
+                  <label class="btn btn-light active" for="worker" onclick="moveSlider('worker')" data-hi="श्रमिक" data-en="WORKER">WORKER</label>
+                  
+                  <!-- Customer Button -->
+                  <input type="radio" class="btn-check" name="toggle" id="customer" autocomplete="off">
+                  <label class="btn btn-light" for="customer" onclick="moveSlider('customer')" data-hi="ग्राहक" data-en="CUSTOMER">CUSTOMER</label>
+                </div>
+              </div>
+        </div>
+
+        <!-- Worker Login Form-->
+        <div id="workerFormdiv" style="display: block;">
+        <div class="container-fluid col-md-4 formbox" style="background-color: white;border-radius: 20px;box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;">
+
+            <div class="col-sm-12" style="display: flex;align-items: center;justify-content: center;">
+                <img src="image/worker.png" class="img-fluid worker-registration" alt="..." style="border-radius: 50%;margin:30px 0px;max-width: 50% !important;border: 2px solid black;padding: 10px;">
+            </div>
+            <div class="row formbox3">
+                <div class="col-sm-10 formbox2" style="padding-top: 5px;margin: auto;">
+                    <form class="" enctype="multipart/form-data" id="workerlogin" method="POST">
+
+                        <!-- Phone Number-->
+                        <div class="col-sm-12">
+                            <label for="workerPhoneNumber" class="form-label" data-en="Phone Number" data-hi="फ़ोन नंबर">Phone Number</label>
+                            <input type="tel" class="form-control" id="workerPhoneNumber" name="workerPhoneNumber" required>
+                            <div id="workerPhoneError" style="color: red; font-size: 0.9em; display: none; margin-left: 5px; margin-top: 5px;" 
+                                 data-en="Phone number must start with 5-9 and be 10 digits long." 
+                                 data-hi="फ़ोन नंबर 5-9 से शुरू होना चाहिए और 10 अंकों का होना चाहिए।">
+                                 Phone number must start with 5-9 and be 10 digits long.
+                            </div>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="col-sm-12">
+                            <label for="dob" class="form-label" data-en="Date of Birth" data-hi="जन्म तिथि">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob" name="dob" required>
+                            <div id="dobError" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;"data-en="You must be at least 18 years old." data-hi="
+                            आपकी आयु 18 वर्ष या उससे अधिक होनी चाहिए">You must be at least 18 years old.</div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="col-sm-12">
+                            <label for="workerpassword" class="form-label" data-en="Password" data-hi="पासवर्ड">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="workerpassword" name="workerpassword" required>
+                                <span class="input-group-text" id="toggle-password" style="cursor: pointer;">
+                                    <i class="bi bi-eye" id="eye-icon"></i> 
+                                </span>
+                            </div>
+                            <div id="workerpassworderror" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;" data-en="Password must be exactly 12 digits and contain only numbers." data-hi="पासवर्ड में केवल 12 अंक और संख्याएं होनी चाहिए।"></div>
+                        </div>   
+
+                        <!-- Show Error while Login -->
+                        <div class="col-sm-12" style="margin-top: 10px;">
+                            <div id="loginerror" style="color: red;font-weight: 400;font-style: italic;display: none; font-size: 0.9em;margin-left: 5px;margin-top: 5px;"data-en="Wrong Phone Number or Password or Date of Birth" data-hi="
+                            आपने गलत फ़ोन नंबर या पासवर्ड या जन्मतिथि दर्ज की है"></div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="col-sm-12 button-area" style="margin-top:40px;" id="submitButton" >
+                            <button type="submit" class="btn btn-primary w-100" data-en="Login" data-hi="लॉगिन" disabled id="workerloginbutton" >Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Customer Login Form-->
+        <div id="customerFormdiv" style="display: none;">
+            <div class="container-fluid col-md-4 formbox" style="background-color: white;border-radius: 20px;box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;">
+
+                <div class="col-sm-12" style="display: flex;align-items: center;justify-content: center;">
+                    <img src="image/client.png" class="img-fluid worker-registration" alt="..." style="border-radius: 50%;margin:30px 0px;max-width: 50% !important;border: 2px solid black;padding: 10px;">
+                </div>
+                <div class="row formbox3">
+                    <div class="col-sm-10 formbox2" style="padding-top: 5px;margin: auto;">
+                        <form id="customerlogin" method="POST" action="/customerloginaction">
+
+                            <!-- Phone Number -->
+                            <div class="col-sm-12">
+                                <label for="customerPhoneNumber" class="form-label" data-en="Phone Number" data-hi="फ़ोन नंबर">Phone Number</label>
+                                <input type="tel" class="form-control" id="customerPhoneNumber" name="customerPhoneNumber" required>
+                                <div id="customerPhoneError" style="color: red; font-size: 0.9em; display: none; margin-left: 5px; margin-top: 5px;" 
+                                     data-en="Phone number must start with 5-9 and be 10 digits long." 
+                                     data-hi="फ़ोन नंबर 5-9 से शुरू होना चाहिए और 10 अंकों का होना चाहिए।">
+                                     Phone number must start with 5-9 and be 10 digits long.
+                                </div>
+                            </div>
+                            <!-- Customer Password -->
+                            <div class="col-sm-12">
+                                <label for="customerpassword" class="form-label" data-en="Password" data-hi="पासवर्ड">Password</label>
+
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="customerpassword" name="customerpassword" required>
+                                    <span class="input-group-text" id="toggle-password" style="cursor: pointer;">
+                                        <i class="bi bi-eye" id="eye-icon"></i> 
+                                    </span>
+                                </div>
+                                <div id="customerpassworderror" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;"data-en="password must contain at least 8 characters , including special character , alphabet and number" data-hi="
+                                पासवर्ड में विशेष वर्ण, वर्णमाला और संख्या सहित कम से कम 8 अक्षर होने चाहिए">password must contain at least 8 characters , including special character , alphabet and number</div>
+                            </div>   
+                            <!-- Show Error while Login -->
+                            <div class="col-sm-12" style="margin-top: 10px;">
+                                <div id="loginerror" style="color: red;font-weight: 400;font-style: italic;display: none; font-size: 0.9em;margin-left: 5px;margin-top: 5px;"data-en="Wrong Phone Number or Password" data-hi="
+                                आपने गलत फ़ोन नंबर और पासवर्ड दर्ज किया है"></div>
+                            </div>
+                            <!-- Submit Button -->
+                            <div class="col-sm-12 button-area" id="submitButton" style="margin-top: 40px;">
+                                <button type="submit" class="btn btn-primary w-100"  data-en="Login" data-hi="लॉगिन" disabled id="customerloginbutton">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: #3250fc;color: white;">
+              <h5 class="modal-title" id="registerModalLabel" data-en="Choose Register Type" data-hi="पंजीकरण प्रकार चुनें">Choose Register Type</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
+            </div>
+            <div class="modal-body text-center">
+              <button type="button" class="btn register-worker" onclick="window.location.href='/workerregistration.html';" data-en="Register as Worker" data-hi="श्रमिक पंजीकरण">Register as Worker</button>
+              <button type="button" class="btn register-customer" onclick="window.location.href='/Customerregistration.html';" data-en="Register as Customer" data-hi="ग्राहक पंजीकरण">Register as Customer</button>
+            </div>
+          </div>
+        </div>
+      </div>    
+<script src="login.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

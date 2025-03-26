@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Daily Rozgaar</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Registration.css">
+        <link rel="stylesheet" href="customerhomepage.css?v=2.0">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <style>
+            
+
+  
+  
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid topbar d-flex justify-content-end align-items-center">
+            <img src="image/india.png" class="img-fluid" alt="India">
+            <div class="col-sm-1 chooselanguage">
+              <select class="form-select" id="languageSelect">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+              </select>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg" id="home" style="border-radius: 50px !important; margin: 15px 10px 0px 10px;">
+            <div class="container-fluid " >
+              <a class='navbar-brand' href='/'>
+                <img src="image/dailyrozgaar.png" alt="Logo" class="d-inline-block"></a>
+                <div class="row" style="float: left;">
+                    <p class="h1 maintitle">DAILY ROZGAAR<br>
+                    <span class="h1 tagline" data-en="Where Local Skills Meet Home" data-hi="जहां स्थानीय कौशल घर से मिलते हैं">Where  Local Skills Meet Home</span>
+                    </p>
+                </div>
+              
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link otherlink"  data-en="Service" data-hi="सर्विस">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link otherlink" data-en="Profile" data-hi="प्रोफ़ाइल">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link logout-button" href="/logout"><span data-en="Logout" data-hi="लॉगुट"></span><i class="bi bi-box-arrow-right"></i></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="service">
+          <div class="container-fluid text-center" id="servicecategory">
+            <p class="h1"><i class="bi bi-tools" style="margin-right: 1vw;"></i><span data-hi="सेवाएँ" data-en="Services"></span></p>
+              <div class="row" style="display: flex;align-items: center;justify-content: space-evenly;">
+                  <div class="card mb-3" role="button" id="mistri">
+                      <div class="row g-0">
+                        <div class="col-4">
+                          <img src="image/wall.png" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <h2 class="card-title mb-0" data-en="Mistri" data-hi="मिस्त्री"></h2>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="card mb-3" role="button" id="labour">
+                      <div class="row g-0">
+                        <div class="col-4">
+                          <img src="image/builder.png" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <h2 class="card-title mb-0" data-en="Labour" data-hi="मजदूर"></h2>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="card mb-3"  role="button" id="electrician">
+                      <div class="row g-0">
+                        <div class="col-4">
+                          <img src="image/electrician.png" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <h2 class="card-title mb-0" data-en="Electrician" data-hi="इलेक्ट्रिशियन"></h2>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="card mb-3"  role="button" id="plumber">
+                      <div class="row g-0">
+                        <div class="col-4">
+                          <img src="image/plumber.png" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <h2 class="card-title mb-0" data-en="Plumber" data-hi="प्लंबर"></h2>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="card mb-3"  role="button" id="painter">
+                      <div class="row g-0">
+                        <div class="col-4">
+                          <img src="image/painter.png" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <h2 class="card-title mb-0" data-en="Painter" data-hi="पेंटर"></h2>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="card mb-3"  role="button" id="carpenter">
+                      <div class="row g-0">
+                        <div class="col-4">
+                          <img src="image/carpenter.png" class="img-fluid" alt="...">
+                        </div>
+                        <div class="col-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <h2 class="card-title mb-0" data-en="Carpenter" data-hi="कारपेंटर"></h2>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container-fluid" id="profileshow">
+            <div class="col-sm-12" style="display: flow-root; align-items: center;">
+                <button id="backbutton" style="float: left;"><h2 style="font-size: 2rem;"><i class="bi bi-arrow-left-square-fill"></i></h2></button>
+                <h2 class="h2 text-center">Labour's Profiles in Your location</h2>
+            </div>
+            <div class="col-sm-12">
+              <div class="row profileshowrow" style="display: flex; align-items: center;text-align: center; ">
+                      <div class="col-3 profilebox" id="profilediv">
+                        <div class="row">
+                          <div class="col-5" style="padding: 0;">
+                            <img src="${profile.image}" class="img-fluid" alt="${profile.fullName}">
+                          </div>
+                          <div class="col-7 d-flex flex-column justify-content-center align-items-center">
+                            <p>${profile.fullName}</p>
+                            <button type="button" class="btn viewprofile" data-hi="प्रोफ़ाइल देखें" data-en="View Profile" data-bs-toggle="modal" data-bs-target="#profileviewmodal" data-id="${profile.workerid}"></button>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+            </div>
+            <div class="modal fade" id="profileviewmodal" tabindex="-1" aria-labelledby="existingUserModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" style="max-width: 40%;">
+                <div class="modal-content">
+                  <div class="modal-header" style="background-color: #0A2647;color:white;text-align: center;">
+                    <h5 class="modal-title" id="existingUserModalLabel" data-hi="प्रोफ़ाइल" data-en="PROFILE"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                      <img src="image/worker1.png" class="img-fluid" style="width: 200px; margin: auto; border: 5px solid #FF7F3E !important; margin-bottom: 20px; border-radius: 20px; padding: 5px;">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <th scope="row" data-en="NAME" data-hi="नाम"></th>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" data-hi="फ़ोन नंबर" data-en="Phone Number"></th>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row" data-en="Address" data-hi="पता"></th>
+                            <td colspan="2"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="d-flex justify-content-between w-100" id="buttonareaprofile">
+                        <button type="button" class="btn sendrequest"><i class="bi bi-send-fill"></i><span data-en="Send Request" data-hi="अनुरोध भेजे"></span></button>
+                        <button type="button" class="btn cancelrequest" style="display: none;"><i class="bi bi-x-circle-fill"></i><span data-en="Cancel Request" data-hi="रद्द करें"></span></button>
+                        <button type="button" class="btn acceptedrequest" disabled style="display: none;"><i class="bi bi-check-lg"></i><span data-en="Accepted" data-hi="स्वीकार किया"></span></button>
+                        <button type="button" class="btn contactbutton"><i class="bi bi-telephone-fill"></i><span data-en="Contact" data-hi="संपर्क करें"></span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="container-fluid" id="profile" style="padding: 10vh 0vh;">
+          <div class="container-fluid col-md-8 formbox" style="background-color: white;border-radius: 20px;box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;">
+            <div class="row formbox3">
+                <div class="col-sm-11 formbox2" style="padding-top: 5px;margin: 40px 30px;">
+                    <form class="row" enctype="multipart/form-data" id="customerform" method="POST" action="/updateDetails">
+
+                        <div class="col-sm-12" style="text-align: center;">
+                          <p class="h1" data-en="Profile" data-hi="प्रोफ़ाइल">Profile</p>
+                          <hr>
+                      </div>
+                        <div class="col-md-4 button-area editbutton" style="margin-top:40px;">
+                          <button class="btn btn-primary w-100"  style="background-color: #0db523;box-shadow:none;" id="editBut"><i class="bi bi-pencil-square"></i><span data-en="Edit Detail" data-hi="एडिट प्रोफ़ाइल" style="margin-left:10px ;"></span></button>
+                        </div>
+
+                        <div class="col-md-12" style="display: flex;justify-content: center;align-items: center;">
+                          <div class="col-md-4 preview-container" id="imagePreviewContainer" style="display: flex; margin: 5vh 0vh; position: relative;">
+                  
+                            <img id="imagePreview" class="img-fluid" alt="Uploaded Image Preview" src="" 
+                                style="width: 200px; height: 200px; position: relative;">
+                        
+                            <input type="file" id="imageUploadInput" accept="image/*" name="uploadImage" style="display: none;" disabled>
+                            <div id="uploadHint" class="text-center" 
+                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);color:white; font-size: 1em; opacity: 0; transition: opacity 0.3s;display: none;">Update Image<br><i class="bi bi-pencil-fill"></i>
+                            </div>
+                        </div>
+                      </div>
+                      <div id="imageError" class="text-danger col-md-12 text-center" style="display: none; font-size: 0.9em; margin-top: 0.5em;">
+                        File size must be less than 500 KB.
+                    </div>
+
+                        <!-- Full Name -->
+                        <div class="col-sm-4 custom-column" style="position: relative;">
+                            <label for="fullName" class="form-label" data-en="Full Name" data-hi="पूरा नाम">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required disabled>
+                            <div id="fullNameError" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;" data-en="No White Space in Starting" data-hi="शुरुवात में कोई व्हाइट स्पेस नहीं होने चाहिए">No White Space in Starting </div>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="col-sm-4 custom-column">
+                            <label for="phoneNumber" class="form-label" data-en="Phone Number" data-hi="फ़ोन नंबर">Phone Number</label>
+                            <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required disabled>
+                            <div id="phoneError" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;" data-en="Phone number must start with 5-9 and be 10 digits long." data-hi="
+                            फ़ोन नंबर 5-9 से शुरू होना चाहिए और 10 अंकों का होना चाहिए।">Phone number must start with 5-9 and be 10 digits long.</div>
+                            
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-4">
+                            <label for="email" class="form-label" data-en="Email" data-hi="ईमेल">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required disabled>
+                            <div id="emailError" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;"data-en="Enter Valid Email id" data-hi="
+                            वैध ईमेल आईडी दर्ज करें">Enter Valid Email id</div>
+                        </div>
+                      
+                        <!-- ZIP Code -->
+                        <div class="col-sm-4">
+                            <label for="zip" class="form-label" data-en="PIN Code" data-hi="पिन कोड">PIN Code</label>
+                            <input type="text" class="form-control" id="zip" name="zip" required oninput="fetchCityState()" disabled>
+                            
+                            <!-- Error message for invalid PIN code -->
+                            <div id="zipError" class="text-danger" style="display: none; font-size: 0.9em; margin-top: 0.5em;" data-en="Invalid PIN code" data-hi="अमान्य पिन कोड">
+                                Invalid PIN code
+                            </div>
+                        </div>
+
+                        <!-- State -->
+                        <div class="col-sm-4">
+                            <label for="state" class="form-label" data-en="State" data-hi="राज्य">State</label>
+                            <input type="text" class="form-control" id="state" name="state" readonly disabled>
+                        </div>
+
+                        <!-- City -->
+                        <div class="col-sm-4">
+                            <label for="city" class="form-label" data-en="City" data-hi="शहर">City</label>
+                            <input type="text" class="form-control" id="city" name="city" readonly disabled>
+                        </div>
+
+                        <!-- Sub Division -->
+                        <div class="col-sm-6">
+                            <label for="subdivision" class="form-label" data-en="Sub Division" data-hi="तहसील">Sub Division</label>
+                            <select class="form-control" id="subdivision" name="subdivision" readonly disabled></select>
+                        </div>
+
+                        <!-- Address Line 1 -->
+                        <div class="col-sm-6">
+                            <label for="address1" class="form-label" data-en="Address" data-hi="पता">Address</label>
+                            <input type="text" class="form-control" id="address1" name="address1" required disabled>
+                            <div id="addressError" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;" data-en="No White Space in Starting" data-hi="शुरुवात में कोई व्हाइट स्पेस नहीं होने चाहिए">No White Space in Starting </div>
+                        </div>
+                        <!-- <div class="col-md-12"> -->
+                        <!-- Submit Button -->
+                                <div class="col-sm-6 button-area" id="buttonArea">
+                                    <button type="submit" id="submitButton" class="btn btn-primary w-100" data-en="Save Detail" data-hi="सबमिट">Save Detail</button>
+                                </div>
+                                <div class="col-sm-6 button-area">
+                                  <button id="cancelButton" class="btn btn-primary w-100" data-en="Cancel" data-hi="रद्द करें"></button>
+                              </div>
+                        <!-- </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!--Update Profile -->
+        <div class="modal fade" id="updatedsuccessfully" tabindex="-1" aria-labelledby="updatedsuccessfullyLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header" style="background-color: white;color:black;border-radius: 10px; display: flex; justify-content: center; align-items: center; width: 100%;">
+                      <i class="bi bi-check-circle-fill" style="color: #59d603; margin-right: 10px;"></i>
+                      <h5 class="modal-title" id="updatedsuccessfullyLabel" data-hi="प्रोफ़ाइल सफलतापूर्वक अपडेट हो गया है" data-en="Profile updated successfully"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+              </div>
+          </div>
+      </div>
+<script src="customerhomepage.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+</body>
+</html>

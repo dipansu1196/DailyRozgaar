@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Daily Rozgaar</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Registration.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!---TOP BAR-->
+    <div class="container-fluid topbar d-flex justify-content-end align-items-center">
+        <img src="image/india.png" class="img-fluid" alt="...">
+        <div class="col-sm-1 chooselanguage">
+          <select class="form-select" id="languageSelect">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+    </div>
+
+    <!---NAV BAR-->
+    <nav class="navbar navbar-expand-lg" id="home" style="border-radius: 50px !important; margin: 15px 10px 0px 10px;">
+      <div class="container-fluid " >
+        <a class='navbar-brand' href='/'>
+            <img src="image/dailyrozgaar.png" alt="Logo" class="d-inline-block">
+        </a>
+        <div class="row">
+            <p class="h1  maintitle">DAILY ROZGAAR<br>
+            <span class="h1 tagline" data-en="Where Local Skills Meet Home" data-hi="जहां स्थानीय कौशल घर से मिलते हैं">Where  Local Skills Meet Home</span>
+            </p>
+        </div>
+        
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link otherlink" href="index.html" data-en="Home" data-hi="होम पेज">Home</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link login-button" href="#achievement" onclick="window.location.href='login.html';" data-en="Login" data-hi="लॉगिन" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Worker Registration-->
+    <div class="container-fluid backgroundimg" style="background-color: black;padding:5vw 0vw;">
+        <div class="container-fluid col-md-6 formbox" style="background-color: white;border-radius: 20px;box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;">
+            <div class="col-sm-12" style="display: flex;align-items: center;justify-content: center;">
+                <img src="image/worker-registration.png" class="img-fluid worker-registration" alt="..." style="border-radius: 10px;margin:30px 0px;max-width: 95% !important;border: 1px solid black;">
+            </div>
+            <div class="row formbox3">
+                <div class="col-sm-11 formbox2" style="padding-top: 5px;margin: auto;">
+                    <form class="row" enctype="multipart/form-data" id="workerform" method="POST">
+                        <!-- Worker Registration Heading -->
+                        <div class="col-sm-12" style="text-align: center;color:white;background-color: #0C7554;border-radius: 10px;border:1px solid black;padding: 2vh 0vh;">
+                            <p class="h1" data-en="Worker Registration" data-hi="श्रमिक पंजीकरण">Worker Registration</p>
+                            
+                        </div>
+
+                        <!-- Upload Image -->
+                        <div class="col-sm-6" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <label for="uploadImage" class="form-label custom-file-upload">
+                                <span id="uploadimagetext" data-en="Upload Image" data-hi="अपना फ़ोटो अपलोड करें">Upload Image</span>
+                                <span id="uploadedimagetext" data-en="Uploaded Successfully" data-hi="सफलतापूर्वक अपलोड हो गया">Upload Image</span>
+                                
+                                <i class="bi bi-upload"></i>
+                            </label>
+                            <input type="file" class="form-control" id="uploadImage" name="uploadImage" accept="image/*" onchange="validateImage()" style="margin: auto;" required>
+                            
+                            <!-- Error message for file size -->
+                            <div id="imageError" class="text-danger" style="display: none; font-size: 0.9em; margin-top: 0.5em;" data-en="File size must be less than 500 KB." data-hi="फ़ाइल का आकार 500 KB से कम होना चाहिए.">
+                                File size must be less than 500 KB.
+                            </div>
+                        </div>
+
+                        <!-- Preview Image -->
+                        <div class="col-sm-6 preview-container" id="imagePreviewContainer">
+                            <img id="imagePreview" class="img-fluid" alt="Uploaded Image Preview">
+                        </div>
+
+                        <!-- Preview Button -->
+                        <div class="col-sm-12 mt-3 ">
+                            <button type="button" class="btn btn-dark w-100" onclick="togglePreview()" data-en="Preview Image" data-hi="फ़ोटो देखें"></button>
+                        </div>
+
+                        <!-- Full Name -->
+                        <div class="col-sm-6" style="position: relative;">
+                            <label for="fullName" class="form-label" data-en="Full Name" data-hi="पूरा नाम">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required>
+                            <div id="fullNameError" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;" data-en="No White Space in Starting" data-hi="शुरुवात में कोई व्हाइट स्पेस नहीं होने चाहिए">No White Space in Starting </div>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="col-sm-6">
+                            <label for="phoneNumber" class="form-label" data-en="Phone Number" data-hi="फ़ोन नंबर">Phone Number</label>
+                            <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                            <div id="phoneError" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;" data-en="Phone number must start with 5-9 and be 10 digits long." data-hi="
+                            फ़ोन नंबर 5-9 से शुरू होना चाहिए और 10 अंकों का होना चाहिए।">Phone number must start with 5-9 and be 10 digits long.</div>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="col-sm-6">
+                            <label for="dob" class="form-label" data-en="Date of Birth" data-hi="जन्म तिथि">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob" name="dob" required>
+                            <div id="dobError" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;"data-en="You must be at least 18 years old." data-hi="
+                            आपकी आयु 18 वर्ष या उससे अधिक होनी चाहिए">You must be at least 18 years old.</div>
+                        </div>
+                        
+                        <!-- Ocupation -->
+                        <div class="col-sm-6">
+                            <label for="inputState" class="form-label" data-en="Ocupation" data-hi="व्यवसाय">Ocupation</label>
+                                <select id="inputState" class="form-select" name="occupation" required>
+                                    <option value="Labour" selected data-en="Labour" data-hi="लेबर">Labour</option>
+                                    <option value="Mistri" data-en="Mistri" data-hi="मिस्त्री">Mistri</option>
+                                    <option value="Carpenter" data-en="Carpenter" data-hi="कारपेंटर">Carpenter</option>
+                                    <option value="Electrician" data-en="Electrician" data-hi="इलेक्ट्रीशियन">Electrician</option>
+                                    <option value="Plumber" data-en="Plumber" data-hi="प्लंबर">Plumber</option>
+                                    <option value="Painter" data-en="Painter" data-hi="पेंटर">Painter</option>
+                                </select>
+                        </div>
+                        
+                        <!-- Aadhaar Card Number -->
+                        <div class="col-sm-6">
+                            <label for="aadhaarNumber" class="form-label" data-en="Aadhar Card Number" data-hi="आधार कार्ड नंबर">Aadhaar Card Number</label>
+                            <input type="text" class="form-control" id="aadhaarNumber" name="aadhaarNumber" maxlength="14" oninput="handleAadhaarNumber(this)" required placeholder="Enter 12-digit Aadhaar number" data-en="Enter 12-digit Aadhaar number" data-hi="12 अंकों का आधार नंबर दर्ज करें">
+                            <div id="aadhaarError" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;" data-en="Aadhaar number must be 12 digits long." data-hi="
+                            आधार नंबर 12 अंक लंबा होना चाहिए.">Aadhaar number must be 12 digits long.</div>
+                        </div>
+
+                        <!--Upload Aadhar Card -->
+                        <div class="col-sm-6">
+                            <label for="uploadAadharCard" class="form-label" data-en="Upload Aadhar Card (Front and Back)" data-hi="आधार कार्ड अपलोड करें (आगे और पीछे)">Upload Aadhar Card (Front and Back)</label>
+                            <div class="custom-file">
+                                <input class="custom-file-input" type="file" id="uploadAadharCard" name="uploadAadharCard" 
+                                       accept="image/*,application/pdf" required onchange="validateFileSize(this)">
+                                <label class="custom-file-label" for="uploadAadharCard"><i class="bi bi-paperclip"></i><span id="uploadaadhartext" data-hi="फाइलें चुनें" data-en="Choose File"></span><span id="uploadedaadhartext" data-hi="आधार अपलोड हो गया" data-en="Aadhar uploaded"></span></label>
+                            </div>
+                            
+                            <!-- Error message for file size -->
+                            <div id="aadharError" class="text-danger" style="display: none; font-size: 0.9em; margin-left: 5px;margin-top: 5px;" data-en="File size must be less than 500 KB." data-hi="फ़ाइल का आकार 500 KB से कम होना चाहिए.">
+                                File size must be less than 500 KB.
+                            </div>
+                        </div>
+
+                        <!-- ZIP Code -->
+                        <div class="col-sm-6">
+                            <label for="zip" class="form-label" data-en="PIN Code" data-hi="पिन कोड">PIN Code</label>
+                            <input type="text" class="form-control" id="zip" name="zip" required oninput="fetchCityState()">
+                            
+                            <!-- Error message for invalid PIN code -->
+                            <div id="zipError" class="text-danger" style="display: none; font-size: 0.9em; margin-top: 0.5em;" data-en="Invalid PIN code" data-hi="अमान्य पिन कोड">
+                                Invalid PIN code
+                            </div>
+                        </div>
+
+                        <!-- State -->
+                        <div class="col-sm-6">
+                            <label for="state" class="form-label" data-en="State" data-hi="राज्य">State</label>
+                            <input type="text" class="form-control" id="state" name="state" readonly>
+                        </div>
+
+                        <!-- City -->
+                        <div class="col-sm-6">
+                            <label for="city" class="form-label" data-en="City" data-hi="शहर">City</label>
+                            <input type="text" class="form-control" id="city" name="city" readonly>
+                        </div>
+
+                        <!-- Sub Division -->
+                        <div class="col-sm-6">
+                            <label for="subdivision" class="form-label" data-en="Sub Division" data-hi="तहसील">Sub Division</label>
+                            <select class="form-control" id="subdivision" name="subdivision" readonly></select>
+                        </div>
+
+                        <!-- Address Line 1 -->
+                        <div class="col-sm-12">
+                            <label for="address1" class="form-label" data-en="Address" data-hi="पता">Address</label>
+                            <input type="text" class="form-control" id="address1" name="address1" required>
+                            <div id="addressError" style="color: red; font-size: 0.9em; display: none;margin-left: 5px;margin-top: 5px;" data-en="No White Space in Starting" data-hi="शुरुवात में कोई व्हाइट स्पेस नहीं होने चाहिए">No White Space in Starting </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="col-sm-12 button-area" style="margin-top:40px;">
+                            <button type="submit" class="btn btn-primary w-100" data-en="Submit" id="submitButton" data-hi="सबमिट" disabled>Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!--Account Created Modal-->
+    <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #fc6423;color: white;text-align: center;">
+                    <h5 class="modal-title" id="passwordModalLabel" data-en="Your Account is Created Successfully" data-hi="आपका खाता सफलतापूर्वक बन गया है">Your Account is Created Successfully</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <p data-en="Your Password is: " data-hi="आपका पासवर्ड है : " style="display: inline !important;">Your password is: <p id="passwordMessage" style="display: inline !important;"></p></p>
+                        <p data-en="Please Note it Down" data-hi="कृपया इसे नोट कर लें">Please Note it Down</p>
+                        <button type="button" class="btn register-worker" onclick="window.location.href='login.html';" data-en="Login" data-hi="लॉगिन">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Already Account-->
+    <div class="modal fade" id="existingUserModal" tabindex="-1" aria-labelledby="existingUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #6e10f4;color:white">
+                    <h5 class="modal-title" id="existingUserModalLabel" data-hi="सूचना" data-en="Notification">Notification</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <p id="existingUserMessage" data-en="You already have an account" data-hi="आपका पहले से ही खाता है">You already have an account</p>
+                        <button type="button" class="btn register-worker" onclick="window.location.href='login.html';" data-en="Login" data-hi="लॉगिन">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'), {
+        backdrop: 'static', 
+        keyboard: false    
+    }); 
+</script>
+<script src="workerregistration.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+@media (min-width: 250px) and (max-width: 991px) 
+{
+
+  .navbar-toggler,.collapsed {
+      visibility: hidden; 
+      pointer-events: none; 
+  }
+
+
+  .navbar-collapse {
+      display: flex !important; 
+      justify-content: center !important; 
+      align-items: center !important; 
+      border-top: 2px solid black;
+  }
+
+  .navbar-nav {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center;
+      margin: auto;
+      margin-top: 2vh !important;
+  }
+  
+  .navbar-nav .nav-item {
+      margin: 0 10px; 
+  }
+
+  .nav-link {
+      padding: 5px 10px !important; 
+      font-size: 16px !important;
+      margin-top: 5px !important;
+      
+  }
+
+
+}
+@media (min-width: 250px) and (max-width: 450px)
+  {
+      .nav-link,.nav-link i{
+          font-size: 0.8rem !important;
+      }
+      .navbar{
+          margin:10px 10px !important;
+      }
+  }
+      
+ 
+
+  @media (min-width: 250px) and (max-width: 576px)
+  {
+    .card{
+      width: 90% !important;
+      max-width: 350px !important;
+      padding: 0rem 0rem !important;
+    }
+    .profilebox,.customerrequestbox{
+      width:320px !important; 
+      
+    }
+    .profilebox{
+      margin-bottom: 3vh !important;
+    }
+    .profilebox img{
+      width: 90px !important;
+      height: 90px !important;
+    }
+    .col-5{
+      width: 90px !important;
+    }
+    .col-7{
+      width: calc(100% - 90px) !important; 
+    }
+    .modal-dialog{
+      max-width: 100% !important;
+    }
+    .modal-dialog img{
+      width: 150px !important;
+      border: 5px !important;
+    }
+    .modal-dialog th,td{
+      font-size: 0.8rem !important;
+    }
+    #buttonareaprofile{
+      
+      justify-content: center !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 10px;
+    }
+    .sendrequest,.contactbutton{
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    table th {
+        width: 80px !important;
+    }
+    .requestshowrow{
+      gap:20px !important;
+    }
+  
+  }
+  @media (min-width: 577px) and (max-width: 767.2px)
+  {
+    .editbutton{
+      width: 180px !important;
+    }
+    .custom-column{
+      width: 50% !important;
+    }
+    .custom-column2{
+      width: 33% !important;
+    }
+    .card{
+      width: 90% !important;
+      width: 240px !important;
+      padding: 0.4rem 0.4rem !important;
+    }
+    .card-title{
+      font-size: 2rem !important;
+    }
+    .profileshowrow{
+      padding: 0px 15px !important;
+      gap:10px !important;
+    }
+    .requestshowrow{
+      gap:20px !important;
+    }
+    .profilebox,.customerrequestbox{
+      width:320px !important; 
+      
+    }
+    .profilebox img{
+      width: 100px !important;
+      height: 100px !important;
+    }
+    .col-5{
+      width: 90px !important;
+    }
+    .col-7{
+      width: calc(100% - 90px) !important; 
+    }
+    .modal-dialog{
+      max-width: 80% !important;
+    }
+    .modal-dialog img{
+      width: 150px !important;
+    }
+    .card{
+        width: 90% !important;
+        max-width: 250px !important;
+        padding: 0rem 0rem !important;
+        
+      }
+      .modal-dialog th,td{
+        font-size: 0.9rem !important;
+      }
+  }
+  @media (min-width: 768px) and (max-width: 991px)
+  {
+    .card{
+      width: 90% !important;
+      width: 320px !important;
+      padding: 0.4rem 0.4rem !important;
+    }
+    .profilebox,.customerrequestbox{
+      width: 340px !important;
+    }
+    .profileshowrow{
+      gap:30px !important;
+    }
+    .col-5{
+      width: 110px !important;
+    }
+    .col-7{
+      width: 230px !important;
+    }
+    .modal-dialog{
+      max-width: 60% !important;
+    }
+    .modal-dialog img{
+      width: 170px !important;
+    }
+    .requestshowrow{
+      gap:20px !important;
+    }
+  }
+  @media (min-width:992px) and (max-width:1142px) {
+    .card{
+      width: 90% !important;
+      max-width: 360px !important;
+      padding: 0.4rem 0rem !important;
+    }
+    .profilebox,.customerrequestbox{
+      width: 380px !important;
+    }
+    .profileshowrow{
+      gap:30px !important;
+    }
+    .col-5{
+      width: 110px !important;
+    }
+    .col-7{
+      width: 270px !important;
+    }
+    .modal-dialog{
+      max-width: 60% !important;
+    }
+    .requestshowrow{
+      gap:30px !important;
+    }
+    
+  }
+  
+  #imagePreview{
+    border: 10px solid #0A5EB0 !important;
+  } 
+  
+
+
+  #profile{
+    background-color: #D9EAFD;
+  }
+  input:disabled {
+    background-color: #e9ecef  !important;
+    cursor: not-allowed; 
+  }
+  select:disabled,
+  select[disabled]{
+    background-color: #e9ecef !important;
+
+  }
+  #cancelButton{
+    
+    box-shadow: none;
+    background-color:rgb(233, 4, 4);
+    display: none;
+  }
+  #cancelButton:hover{
+    background-color: rgb(255, 0, 0) !important;
+  }
+  
+  #submitButton{
+    display: none;
+    box-shadow: none;
+  }
+  #backbutton{
+    border: none;
+    padding: 0px;
+
+    background-color:#F5F5F7 ;
+    
+  }
+  #profileshow{
+    background-color: #F5F5F7;
+    padding: 10vh 5vw;
+  }
+  .profilebox{
+    background-color: white;
+    border-radius: 20px;
+    margin: auto;
+    width:330px;
+    margin-top: 4vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .profilebox img{
+    object-fit: cover !important;
+    margin: 10px;
+    border-radius: 10px;
+    width: 110px;
+    height: 110px;
+    border: 1px solid black;
+    padding:5px;
+    
+  }
+  
+  .profilebox p{
+    font-weight: 600;
+    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Suppress warning */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .customerrequestname{
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 10px;
+    color: #ffffff;
+  }
+  table th {
+      width: 140px;
+  }
+
+  body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .otherlink.active {
+      background-color: black !important;
+      color: white !important;
+  }
+  .otherlink.active:hover{
+      background-color: black !important;
+      color: white !important;
+      border: 2px solid black !important;
+  }
+
+  .logout-button{
+    background-color: white !important;
+      color: black !important;
+      border: 2px solid black !important;
+    
+      
+  }
+  .logout-button i{
+      font-size: 1rem;
+      -webkit-text-stroke: 0.5px;
+      margin-left: 5px;
+      margin-top: 0px !important;
+      
+  }
+  .logout-button:hover{
+      background-color: red !important;
+      color: white !important;
+      box-shadow: none !important;
+      border:2px solid red !important;
+    
+  }
+
+  .otherlink:hover{
+      border: 2px solid #0A5EB0 !important;
+      background-color: #0A5EB0 !important;
+      color: white !important;
+      box-shadow: none;
+  }
+  .card{
+    padding: 0.2rem 0rem !important;
+    border-radius: 10px !important;
+    
+    transition: all 0.3s ease;
+    max-width: 440px !important;
+  }
+
+  .card-title{
+    font-family: "Plus Jakarta Sans", sans-serif ;
+    font-weight: 600;   
+    text-align: left !important;
+  }        
+
+  .card img{
+    border-radius: 10%;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 10px 0px;
+    width:70% !important;
+  }
+
+  .card:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+
+  #servicecategory{
+    background-color:#00245c;
+    padding-left: 50px;
+    padding-right: 50px;
+    scroll-margin: 14vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh; 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  #servicecategory p{
+    text-align: center; 
+    font-weight: 800;
+    margin-top: 2vh;
+    margin-bottom: 10vh;
+    color: white;
+  }
+
+  #profileshow h2{
+    text-align: center; 
+    margin-bottom:4vh;
+    font-weight: 600;
+
+  }
+
+
+  .sendrequest{
+    background-color: rgb(161, 255, 20) !important;
+    color: #000000 !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-weight: 600 !important;
+  }
+  .contactbutton{
+    background-color: #4169e1 !important;
+    color: white !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-weight: 600 !important;
+  }
+  .cancelrequest{
+    background-color: rgb(238, 0, 0) !important;
+    color: white !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-weight: 600 !important;
+  }
+ .acceptedrequest{
+  background-color: #00be16 !important;
+  color: white !important;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 600 !important;
+ }
+
+  .contactbutton i,.cancelrequest i,.rejectbutton i,.sendrequest i,.acceptedrequest i{
+    margin-right: 5px !important;
+  }
+
+
+
+  .viewprofile{
+    background-color: #0070e0 !important;
+    color: white !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+  }
+
+  #requests{
+    background-color:#e8e8e8;
+    padding-left: 50px;
+    padding-right: 50px;
+    scroll-margin: 14vh;
+    padding-top: 5vh;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding-bottom: 50vh;
+  }
+  .acceptbutton{
+    background-color: #118B50 !important; 
+    Color:white !important;
+    border:none !important;
+    font-weight: 500 !important;
+  }
+  .rejectbutton{
+    background-color: red !important; 
+    Color:white !important;
+    border:none !important;
+    font-weight: 500 !important;
+    margin-left: 10px;
+  }
+
+.customerrequestbox{
+    margin: auto;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, #242424 100%);
+    color: white; 
+    padding:3vh 0vh;
+    border-radius: 20px;
+  }
+  .customerrequestbox img{
+    background-color: white;
+  }
+  .deleterequestbutton{
+    color: rgb(189, 189, 189) !important;
+    top:-10px !important;
+    right: 3px !important;
+    border: none !important;
+  }
+  .deleterequestbutton:hover{
+    color: rgb(255, 255, 255) !important;
+  }
+  .deleterequestbutton:active{
+    color: white !important;
+    border: none !important;
+    outline: none !important;
+  }
+
+  .pendingstatus,.acceptedstatus,.nostatus{
+    margin-bottom: 5px !important;
+    font-size: 0.8rem !important;
+  }
+  .noprofilestatus{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:#F93827;
+    margin-top: 50px !important;
+  }
