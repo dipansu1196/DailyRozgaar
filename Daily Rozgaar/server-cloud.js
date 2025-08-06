@@ -384,6 +384,20 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/workerregistration.html', (req, res) => {
+    if (req.session.user) {
+        return res.redirect('/workerhomepage.html');
+    }
+    res.sendFile(path.join(__dirname, 'workerregistration.html'));
+});
+
+app.get('/Customerregistration.html', (req, res) => {
+    if (req.session.user) {
+        return res.redirect('/customerhomepage.html');
+    }
+    res.sendFile(path.join(__dirname, 'Customerregistration.html'));
+});
+
 app.get('/login.html', (req, res) => {
     if (req.session.user) {
         if (req.session.role === 'customer') {
@@ -407,20 +421,6 @@ app.get('/workerhomepage.html', (req, res) => {
         return res.redirect('/login.html');
     }
     res.sendFile(path.join(__dirname, 'workerhomepage.html'));
-});
-
-app.get('/Customerregistration.html', (req, res) => {
-    if (req.session.user) {
-        return res.redirect('/customerhomepage.html');
-    }
-    res.sendFile(path.join(__dirname, 'Customerregistration.html'));
-});
-
-app.get('/workerregistration.html', (req, res) => {
-    if (req.session.user) {
-        return res.redirect('/workerhomepage.html');
-    }
-    res.sendFile(path.join(__dirname, 'workerregistration.html'));
 });
 
 // Get worker requests
